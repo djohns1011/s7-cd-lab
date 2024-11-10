@@ -1,0 +1,17 @@
+Enter the number of productions
+4
+Enter productions:
+S=A
+A=aB/Ad
+B=b
+C=g
+Firsts:
+A : a
+B : b
+C : g
+S : a
+Follows:
+A : $d
+B : /
+C :
+S : $
