@@ -39,13 +39,14 @@ int is_delimiter(char c)
 }
 
 int is_keyword(char buffer[]){
+    // 32 keywords - 10 characters each
 	char keywords[32][10] = {"auto","break","case","char","const","continue","default",
 							"do","double","else","enum","extern","float","for","goto",
 							"if","int","long","register","return","short","signed",
 							"sizeof","static","struct","switch","typedef","union",
 							"unsigned","void","volatile","while"};
 	int i;
-	for(i = 0; i < 32; ++i){
+	for(i = 0; i < 32; i++){
 		if(strcmp(keywords[i], buffer) == 0){
 			return 1;
 		}
@@ -59,43 +60,43 @@ void main()
 
     while (fgets(line, sizeof(line), f))
     {
-        // Single line commment '//', skip processing it
-        int flag1 = 0;
-        for (int i = 0; i < strlen(line); i++)
-        {
-            if (line[i] == '/' && line[i + 1] == '/')
-            {
-                flag1 = 1;
-                break;
-            }       
-        }
-        if (flag1)
-            continue;        
+        // // Single line comment '//', skip processing it
+        // int flag1 = 0;
+        // for (int i = 0; i < strlen(line); i++)
+        // {
+        //     if (line[i] == '/' && line[i + 1] == '/')
+        //     {
+        //         flag1 = 1;
+        //         break;
+        //     }       
+        // }
+        // if (flag1)
+        //     continue;        
 
-        // Multi-line comment '/**/'
-        int flag2 = 0;
-        for (int i = 0; i < strlen(line); i++)
-        {
-            if (line[i] == '/' && line[i + 1] == '*')
-            {
-                // Skip all lines until '*/' has occured
-                while (fgets(line, sizeof(line), f))
-                {
-                    for (int j = 0; j < strlen(line); j++)
-                    {
-                        if (line[j] == '*' && line[j + 1] == '/')
-                            flag2 = 1;
-                    }
+        // // Multi-line comment '/**/'
+        // int flag2 = 0;
+        // for (int i = 0; i < strlen(line); i++)
+        // {
+        //     if (line[i] == '/' && line[i + 1] == '*')
+        //     {
+        //         // Skip all lines until '*/' has occured
+        //         while (fgets(line, sizeof(line), f))
+        //         {
+        //             for (int j = 0; j < strlen(line); j++)
+        //             {
+        //                 if (line[j] == '*' && line[j + 1] == '/')
+        //                     flag2 = 1;
+        //             }
 
-                    if (flag2)
-                        break;
-                }
-            }
-        }
-        if (flag2)
-            continue;
+        //             if (flag2)
+        //                 break;
+        //         }
+        //     }
+        // }
+        // if (flag2)
+        //     continue;
 
-        printf("\n%s\n", line);
+        // printf("\n%s\n", line);
 
         char token[100];
         int index = 0;

@@ -9,7 +9,7 @@
 "+" {return '+';}
 "-" {return '-';}
 "*" {return '*';}
-"/" {return '/';}
+"" {return '/';}
 "(" {return '(';}
 ")" {return ')';}
 [ \t]+ {}

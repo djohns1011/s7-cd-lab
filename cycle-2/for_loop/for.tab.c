@@ -68,7 +68,7 @@
 /* Copy the first part of user declarations.  */
 
 /* Line 189 of yacc.c  */
-#line 1 ".\\for.y"
+#line 1 "for.y"
 
     #include <stdio.h>
     int valid = 1;
@@ -1533,7 +1533,7 @@ yyreturn:
 
 
 /* Line 1675 of yacc.c  */
-#line 17 ".\\for.y"
+#line 17 "for.y"
 
 
 int yyerror(){
