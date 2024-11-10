@@ -102,7 +102,7 @@ void main()
     printf("e-closure of states\n");
     for (i = 1; i <= nostate; i++)
     {
-        c = 0;
+        c = 0; 
         for (j = 0; j < 20; j++)
         {
             buffer[j] = 0;

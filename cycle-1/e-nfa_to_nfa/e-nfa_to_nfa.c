@@ -102,7 +102,7 @@ void main()
     int i, j, k, m, t, n;
 
     struct node *temp;
-    printf("enter the number of alphabets?\n");
+    printf("Enter the number of alphabets?\n");
     scanf("%d", &noalpha);
     getchar();
     printf("NOTE:- [ use letter e as epsilon]\n");
