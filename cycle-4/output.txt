@@ -1,0 +1,8 @@
+Enter expression:
+p=a*b+c/d-2
+Op      Destn   Arg1    Arg2
+/       Z       c       d
+*       Y       a       b
++       X       Y       Z
+-       W       X       2
+=       V       p       W
